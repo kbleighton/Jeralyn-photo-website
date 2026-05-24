@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeralyn Photo Site Editor</title>
+    <meta
+      name="description"
+      content="A simple editor for managing Jeralyn's galleries and photo lists without editing code."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="editor.css" />
+  </head>
+  <body>
+    <header class="editor-header">
+      <div class="shell header-row">
+        <div class="header-copy">
+          <p class="eyebrow">Content editor</p>
+          <h1>Jeralyn Photo Site Editor</h1>
+          <p class="header-summary">
+            Add galleries, add photo filenames, and export one updated content file.
+          </p>
+        </div>
+        <div class="header-actions">
+          <a class="button button-secondary" href="index.html">Open Website</a>
+          <button class="button button-primary" id="download-data-button" type="button">
+            Download <code>galleries.js</code>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell editor-layout">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div>
+            <p class="eyebrow">Galleries</p>
+            <h2>Your collections</h2>
+          </div>
+          <button class="button button-dark" id="add-gallery-button" type="button">
+            New Gallery
+          </button>
+        </div>
+        <div class="gallery-list" id="gallery-list"></div>
+      </aside>
+
+      <section class="editor-panel">
+        <div class="workflow-grid">
+          <div class="workflow-item">
+            <span class="workflow-step">1</span>
+            <p>Put photos in <code>assets/photos/&lt;slug&gt;/</code>.</p>
+          </div>
+          <div class="workflow-item">
+            <span class="workflow-step">2</span>
+            <p>Use this page to add the gallery details and filenames.</p>
+          </div>
+          <div class="workflow-item">
+            <span class="workflow-step">3</span>
+            <p>Download a new <code>galleries.js</code> file and replace the one in <code>data/</code>.</p>
+          </div>
+        </div>
+
+        <div class="status-row">
+          <p class="status-message" id="status-message"></p>
+          <div class="status-actions">
+            <button class="button button-secondary" id="copy-data-button" type="button">
+              Copy Data
+            </button>
+            <button class="button button-secondary" id="reset-draft-button" type="button">
+              Reset to Published
+            </button>
+          </div>
+        </div>
+
+        <div id="editor-form-root"></div>
+
+        <details class="export-preview">
+          <summary>Generated data file</summary>
+          <textarea id="export-preview" readonly spellcheck="false"></textarea>
+        </details>
+      </section>
+    </main>
+
+    <input id="photo-file-picker" type="file" accept="image/*" multiple hidden />
+
+    <script src="data/galleries.js"></script>
+    <script src="editor.js"></script>
+  </body>
+</html>

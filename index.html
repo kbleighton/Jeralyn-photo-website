@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeralyn Photo Journal</title>
+    <meta
+      name="description"
+      content="A photo journal for favorite moments, travel memories, birthdays, and the everyday stories worth keeping."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-shell header-row">
+        <a class="brand" href="#top">Jeralyn</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#galleries">Galleries</a>
+          <a href="#collections">Collections</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="hero">
+        <div class="site-shell hero-layout">
+          <div class="hero-copy">
+            <p class="section-label">Photo journal</p>
+            <h1>Jeralyn</h1>
+            <p class="hero-summary">
+              A home for favorite moments, birthday weekends, big trips, and the
+              everyday memories worth keeping close.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#galleries">Browse galleries</a>
+              <button class="button button-secondary" id="featured-gallery-button" type="button">
+                Open featured gallery
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="Site highlights">
+        <div class="site-shell stats-grid" id="stats-grid"></div>
+      </section>
+
+      <section class="section section-intro">
+        <div class="site-shell intro-layout">
+          <div>
+            <p class="section-label">A place for the years</p>
+            <h2>Trips, birthdays, and the quiet days in between.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              Some memories live in big milestone weekends, and some live in the
+              ordinary days that ended up meaning more than expected.
+            </p>
+            <p>
+              This journal is built to hold both: the places worth revisiting and
+              the moments that still feel close years later.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-themes" id="collections">
+        <div class="site-shell">
+          <div class="themes-header">
+            <div>
+              <p class="section-label">Collections</p>
+              <h2>Different kinds of memories, each with room to grow.</h2>
+            </div>
+          </div>
+          <div class="theme-grid">
+            <article class="theme-item">
+              <p class="theme-kicker">Favorite moments</p>
+              <h3>For the photos that never really fit one event.</h3>
+              <p>
+                The everyday highlights, small traditions, and pictures that stay
+                worth keeping nearby.
+              </p>
+            </article>
+            <article class="theme-item">
+              <p class="theme-kicker">Travel stories</p>
+              <h3>Trips with enough texture to deserve their own space.</h3>
+              <p>
+                Weekend getaways, long vacations, and the kind of scenery that is
+                hard to leave behind.
+              </p>
+            </article>
+            <article class="theme-item">
+              <p class="theme-kicker">Celebrations</p>
+              <h3>Birthdays, dinners, milestones, and the people around them.</h3>
+              <p>
+                A simple way to keep one-off events easy to revisit without losing
+                the feeling of the day.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-browser" id="galleries">
+        <div class="site-shell">
+          <div class="browser-header">
+            <div>
+              <p class="section-label">Galleries</p>
+              <h2>Favorite moments, grouped in a way that stays easy to manage.</h2>
+            </div>
+            <div class="filter-row" id="tag-filters" aria-label="Gallery filters"></div>
+          </div>
+          <div class="gallery-grid" id="gallery-grid"></div>
+        </div>
+      </section>
+
+      <section class="section section-detail is-hidden" id="gallery-detail" aria-live="polite">
+        <div class="site-shell" id="gallery-detail-content"></div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-row">
+        <p>Jeralyn Photo Journal</p>
+        <p>Static starter for a later WordPress build.</p>
+      </div>
+    </footer>
+
+    <div class="lightbox is-hidden" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photo view">
+        Close
+      </button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous photo">
+        Prev
+      </button>
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" src="" alt="" />
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next photo">
+        Next
+      </button>
+    </div>
+
+    <script src="data/galleries.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

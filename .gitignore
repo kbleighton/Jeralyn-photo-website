@@ -9,6 +9,10 @@ yarn-error.log*
 # OS files
 .DS_Store
 
+# Raw photo imports and originals
+assets/photos/TO BE ADDED/
+assets/photos/coachella-2026/*.HEIC
+
 # Build directories
 dist/
 build/
